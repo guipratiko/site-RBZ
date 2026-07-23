@@ -17,30 +17,38 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const webhookUrl = process.env.POPUP_WEBHOOK_URL;
+  const webhookUrl = process.env.POPUP_WEBHOOK_URL?.trim();
   if (!webhookUrl) {
     console.error("POPUP_WEBHOOK_URL is not configured");
-    // Still 200 so the client UX never blocks on misconfig
     return NextResponse.json({ ok: true, forwarded: false });
   }
 
   const { website, ...payload } = parsed.data;
   void website;
 
-  // Fire-and-forget: respond to the browser immediately, forward in background.
-  void fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      ...payload,
-      formType: "popup-loja",
-      source: "rbz-website-popup",
-      submittedAt: new Date().toISOString(),
-    }),
-    signal: AbortSignal.timeout(10_000),
-  }).catch((error) => {
-    console.error("Failed to reach popup webhook", error);
-  });
+  try {
+    // Await no servidor para o Next não cortar o fetch ao responder.
+    // O cliente já fecha o popup sem esperar esta resposta.
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...payload,
+        formType: "popup-loja",
+        source: "rbz-website-popup",
+        submittedAt: new Date().toISOString(),
+      }),
+      signal: AbortSignal.timeout(10_000),
+    });
 
-  return NextResponse.json({ ok: true });
+    if (!response.ok) {
+      console.error("popup webhook responded with", response.status);
+      return NextResponse.json({ ok: true, forwarded: false });
+    }
+  } catch (error) {
+    console.error("Failed to reach popup webhook", error);
+    return NextResponse.json({ ok: true, forwarded: false });
+  }
+
+  return NextResponse.json({ ok: true, forwarded: true });
 }

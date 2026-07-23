@@ -70,14 +70,15 @@ function WelcomePopup() {
   }
 
   function onSubmit(data: PopupLeadInput) {
-    dismiss();
-    // Não aguarda o webhook - fecha imediatamente
+    window.localStorage.setItem(STORAGE_KEY, "1");
+    // Dispara o POST antes de fechar; não aguarda a resposta
     void fetch("/api/popup-lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
       keepalive: true,
     });
+    setOpen(false);
   }
 
   if (!hasMounted || !open) return null;
@@ -158,7 +159,7 @@ function WelcomePopup() {
                   <SelectTrigger id="popup-state">
                     <SelectValue placeholder="Selecione o estado" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="z-[80]">
                     {estadosBrasil.map((estado) => (
                       <SelectItem key={estado.uf} value={estado.uf}>
                         {estado.uf} - {estado.nome}

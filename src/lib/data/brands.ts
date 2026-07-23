@@ -149,8 +149,8 @@ export const brands: Brand[] = [
   {
     slug: "mob",
     name: "Mob",
-    logoSrc: "/images/brands/mob.png",
-    logoOnDark: false,
+    logoSrc: "/images/brands/mob.png?v=3",
+    logoOnDark: true,
     tagline: "Moda praia e casual jovem",
     history:
       "Mob traz propostas descontraídas para o verão, com estampas exclusivas e peças versáteis entre praia e cidade.",
@@ -191,8 +191,8 @@ export const brands: Brand[] = [
   {
     slug: "replay",
     name: "Replay",
-    logoSrc: "/images/brands/replay.png",
-    logoOnDark: false,
+    logoSrc: "/images/brands/replay.png?v=3",
+    logoOnDark: true,
     tagline: "Denim premium internacional",
     history:
       "Replay é uma grife italiana de denim premium, com presença global e forte reconhecimento de marca, representada pela RBZ na região Centro-Oeste.",

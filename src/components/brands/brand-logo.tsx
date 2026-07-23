@@ -9,27 +9,22 @@ interface BrandLogoProps {
   imageClassName?: string;
 }
 
-// Most brand logo files are supplied as white artwork on a transparent
-// background, meant to sit on a dark surface - `logoOnDark` picks the tile
-// background so every logo stays legible regardless of its own ink color.
+// Logos are white on transparent; on light surfaces we invert to near-black
+// so they stay legible without a dark tile behind them.
 function BrandLogo({ brand, className, imageClassName }: BrandLogoProps) {
   return (
     <div
-      className={cn(
-        "flex items-center justify-center rounded-lg",
-        brand.logoOnDark
-          ? "bg-foreground"
-          : "bg-background border border-border",
-        className,
-      )}
+      className={cn("flex items-center justify-center", className)}
     >
       <Image
         src={brand.logoSrc}
         alt={brand.name}
         width={160}
         height={80}
+        unoptimized
         className={cn(
           "h-auto max-h-full w-auto max-w-full object-contain",
+          brand.logoOnDark && "brightness-0",
           imageClassName,
         )}
       />

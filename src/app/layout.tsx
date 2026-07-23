@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WhatsappButton } from "@/components/common/whatsapp-button";
 import { CookieConsentBanner } from "@/components/common/cookie-consent-banner";
+import { WelcomePopup } from "@/components/forms/welcome-popup";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/data/site-config";
 
@@ -57,6 +58,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsappButton />
+        <WelcomePopup />
         <CookieConsentBanner />
       </body>
     </html>

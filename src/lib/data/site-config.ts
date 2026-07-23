@@ -3,10 +3,10 @@ export const siteConfig = {
   name: "RBZ Representações",
   founder: "Rogerio Bozo",
   description:
-    "Gestão de marcas e desenvolvimento de negócios para o varejo de moda. Representação comercial de grandes grifes em todo o Brasil.",
+    "Gestão de marcas e desenvolvimento de negócios para o varejo de moda. Representação comercial de grandes grifes em Goiás, Tocantins e Distrito Federal.",
   url: "https://www.rbzrepresentacoes.com.br",
-  phone: "(62) 9 8126-9405",
-  whatsapp: "5562981269405",
+  phone: "+55 62 0000-0000",
+  whatsapp: "5562000000000",
   email: "contato@rbzrepresentacoes.com.br",
   address: {
     street: "Showroom RBZ",
@@ -39,7 +39,7 @@ export const siteConfig = {
   social: {
     instagram: "https://instagram.com/rbzrepresentacoes",
   },
-  statesServed: ["Todo o Brasil"],
+  statesServed: ["Goiás", "Tocantins", "Distrito Federal"],
 } as const;
 
 export type SiteUnit = (typeof siteConfig.units)[number];

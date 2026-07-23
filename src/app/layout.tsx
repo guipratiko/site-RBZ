@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} - Representação comercial de moda em todo o Brasil`,
+    default: `${siteConfig.name} - Representação comercial de moda em GO, TO e DF`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,

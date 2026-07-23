@@ -5,7 +5,7 @@ export const team = [
   {
     name: "Rogerio Bozo",
     role: "Fundador",
-    bio: "Profissional com ampla experiência no varejo de moda brasileiro, fundou a RBZ para conectar grandes marcas a lojistas em todo o Brasil com credibilidade e relacionamento próximo.",
+    bio: "Profissional com ampla experiência no varejo de moda brasileiro, fundou a RBZ para conectar grandes marcas a lojistas do Centro-Oeste com credibilidade e relacionamento próximo.",
     photoSrc: undefined as string | undefined,
   },
 ] as const;

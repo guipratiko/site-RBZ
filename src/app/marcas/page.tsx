@@ -8,7 +8,7 @@ import { brands } from "@/lib/data/brands";
 export const metadata: Metadata = {
   title: "Marcas",
   description:
-    "Conheça as marcas de moda representadas pela RBZ Representações em todo o Brasil.",
+    "Conheça as marcas de moda representadas pela RBZ Representações em Goiás, Tocantins e Distrito Federal.",
 };
 
 export default function MarcasPage() {

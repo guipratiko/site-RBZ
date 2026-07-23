@@ -64,21 +64,23 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
       return [];
     }
 
-    return json.data
-      .map((item) => {
-        const mediaUrl = resolveImageUrl(item);
-        if (!mediaUrl) return null;
+    const posts: InstagramPost[] = [];
 
-        return {
-          id: item.id,
-          caption: item.caption,
-          mediaType: item.media_type,
-          mediaUrl,
-          permalink: item.permalink,
-          timestamp: item.timestamp,
-        } satisfies InstagramPost;
-      })
-      .filter((post): post is InstagramPost => post !== null);
+    for (const item of json.data) {
+      const mediaUrl = resolveImageUrl(item);
+      if (!mediaUrl) continue;
+
+      posts.push({
+        id: item.id,
+        caption: item.caption,
+        mediaType: item.media_type,
+        mediaUrl,
+        permalink: item.permalink,
+        timestamp: item.timestamp,
+      });
+    }
+
+    return posts;
   } catch (error) {
     console.error("Instagram fetch failed:", error);
     return [];

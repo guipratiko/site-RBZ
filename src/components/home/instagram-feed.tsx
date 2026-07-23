@@ -20,7 +20,7 @@ async function InstagramFeed() {
           <SectionHeading
             eyebrow="Instagram"
             title="Acompanhe a RBZ"
-            description="Posts recentes do nosso perfil - atualizados automaticamente."
+            description="Posts recentes do nosso perfil."
           />
           <Link
             href={siteConfig.social.instagram}

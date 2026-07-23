@@ -23,7 +23,6 @@ type InstagramMediaApiResponse = {
 };
 
 const INSTAGRAM_LIMIT = 6;
-const REVALIDATE_SECONDS = 3600;
 
 function resolveImageUrl(item: InstagramMediaApiItem) {
   if (item.media_type === "VIDEO") {
@@ -33,9 +32,12 @@ function resolveImageUrl(item: InstagramMediaApiItem) {
 }
 
 export async function getInstagramPosts(): Promise<InstagramPost[]> {
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+  // Leitura dinâmica para pegar o token em runtime no container (Easypanel),
+  // e não o valor (ou ausência) do momento do `next build`.
+  const token = process.env["INSTAGRAM_ACCESS_TOKEN"]?.trim();
 
   if (!token) {
+    console.error("Instagram: INSTAGRAM_ACCESS_TOKEN ausente em runtime");
     return [];
   }
 
@@ -49,11 +51,16 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
   try {
     const response = await fetch(
       `https://graph.instagram.com/me/media?${params.toString()}`,
-      { next: { revalidate: REVALIDATE_SECONDS } },
+      // Sem cache de build: em produção o feed depende do token do container.
+      { cache: "no-store" },
     );
 
     if (!response.ok) {
-      console.error("Instagram API error:", response.status, await response.text());
+      console.error(
+        "Instagram API error:",
+        response.status,
+        await response.text(),
+      );
       return [];
     }
 

@@ -16,12 +16,12 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1a1815",
-          color: "#faf8f5",
+          background: "#0d0d0d",
+          color: "#f2f2f2",
           padding: 80,
         }}
       >
-        <div style={{ fontSize: 28, letterSpacing: 6, color: "#8a6d3b" }}>
+        <div style={{ fontSize: 28, letterSpacing: 6, color: "#bdbdbd" }}>
           RBZ REPRESENTAÇÕES
         </div>
         <div
@@ -35,7 +35,7 @@ export default async function Image() {
           Gestão de marcas e desenvolvimento de negócios para o varejo de
           moda
         </div>
-        <div style={{ fontSize: 22, marginTop: 32, color: "#c9c2b6" }}>
+        <div style={{ fontSize: 22, marginTop: 32, color: "#6b6b6b" }}>
           {siteConfig.statesServed.join(" · ")}
         </div>
       </div>

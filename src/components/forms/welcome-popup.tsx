@@ -97,8 +97,8 @@ function WelcomePopup() {
         onClick={dismiss}
       />
 
-      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-border bg-background shadow-[0_25px_80px_-20px_rgba(26,24,21,0.45)] transition duration-300 ease-out">
-        <div className="relative bg-gradient-to-br from-[#1a1815] via-[#2a241c] to-[#8a6d3b] px-6 pb-8 pt-6 text-accent-foreground">
+      <div className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-border bg-background shadow-[0_25px_80px_-20px_rgba(13,13,13,0.45)] transition duration-300 ease-out">
+        <div className="relative bg-gradient-to-br from-[#0d0d0d] via-[#2b2b2b] to-[#6b6b6b] px-6 pb-8 pt-6 text-accent-foreground">
           <button
             type="button"
             onClick={dismiss}

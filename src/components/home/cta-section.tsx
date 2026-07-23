@@ -16,7 +16,11 @@ function CtaSection() {
             Fale com a RBZ Representações e descubra como nossas marcas podem
             gerar mais resultado para o seu negócio.
           </p>
-          <Button asChild size="lg" variant="accent" className="mt-8">
+          <Button
+            asChild
+            size="lg"
+            className="mt-8 bg-background text-foreground hover:bg-[#bdbdbd]"
+          >
             <Link href="/seja-parceiro">Seja Parceiro</Link>
           </Button>
         </FadeIn>

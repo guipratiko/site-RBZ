@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: [{ url: "/images/logo/LogoRBZ.png", type: "image/png" }],
+    apple: [{ url: "/images/logo/LogoRBZ.png", type: "image/png" }],
+    shortcut: "/images/logo/LogoRBZ.png",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Container } from "@/components/common/container";
 import { SectionHeading } from "@/components/common/section-heading";
-import { siteConfig } from "@/lib/data/site-config";
+import { UnitsSection } from "@/components/common/units-section";
 
 export const metadata: Metadata = {
   title: "Showroom",
@@ -43,16 +43,11 @@ export default function ShowroomPage() {
 
       <section className="border-t border-border py-16">
         <Container>
-          <h2 className="text-xl text-foreground">Localização</h2>
-          <div className="mt-6 overflow-hidden rounded-lg border border-border">
-            <iframe
-              src={siteConfig.mapEmbedSrc}
-              title="Mapa do showroom RBZ"
-              className="h-96 w-full"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          <h2 className="text-xl text-foreground">Nossas unidades</h2>
+          <p className="mt-2 text-sm text-muted">
+            A RBZ conta com duas unidades em Goiânia.
+          </p>
+          <UnitsSection className="mt-6" mapClassName="h-80" />
         </Container>
       </section>
     </>

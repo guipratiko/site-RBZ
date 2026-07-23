@@ -12,10 +12,10 @@ function Hero() {
     <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-foreground text-background">
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(138,109,59,0.35),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(138,109,59,0.25),transparent_50%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(107,107,107,0.35),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(43,43,43,0.45),transparent_50%)]"
       />
       <Container className="relative py-32">
-        <p className="mb-6 text-xs font-semibold tracking-[0.3em] text-accent uppercase">
+        <p className="mb-6 text-xs font-semibold tracking-[0.3em] text-[#bdbdbd] uppercase">
           {siteConfig.statesServed.join(" · ")}
         </p>
         <h1 className="max-w-3xl text-4xl leading-[1.1] font-normal sm:text-6xl">
@@ -28,7 +28,11 @@ function Hero() {
           de relacionamento no varejo de moda.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <Button asChild size="lg" variant="accent">
+          <Button
+            asChild
+            size="lg"
+            className="bg-background text-foreground hover:bg-[#bdbdbd]"
+          >
             <Link href="/seja-parceiro">Seja Parceiro</Link>
           </Button>
           <Button

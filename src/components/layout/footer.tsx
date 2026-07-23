@@ -53,11 +53,16 @@ function Footer() {
           <h3 className="text-sm font-semibold tracking-wide text-foreground">
             Contato
           </h3>
-          <ul className="mt-4 space-y-2 text-sm text-muted">
-            <li>{siteConfig.address.street}</li>
-            <li>
-              {siteConfig.address.city} - {siteConfig.address.state}
-            </li>
+          <ul className="mt-4 space-y-3 text-sm text-muted">
+            {siteConfig.units.map((unit) => (
+              <li key={unit.id}>
+                <span className="font-medium text-foreground">{unit.name}</span>
+                <br />
+                {unit.street}
+                <br />
+                {unit.city} - {unit.state}, {unit.zip}
+              </li>
+            ))}
             <li>
               <a href={whatsappLink()} className="hover:text-foreground">
                 {siteConfig.phone}

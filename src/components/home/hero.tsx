@@ -23,9 +23,9 @@ function Hero() {
           moda
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-background/80">
-          A RBZ Representações conecta grandes grifes a lojistas em Goiás,
-          Tocantins e Distrito Federal, com um showroom de 1.700m² e décadas
-          de relacionamento no varejo de moda.
+          A RBZ Representações conecta grandes grifes a lojistas em todo o
+          Brasil, com um showroom de 1.700m² e décadas de relacionamento no
+          varejo de moda.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Button

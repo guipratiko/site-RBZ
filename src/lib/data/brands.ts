@@ -13,7 +13,7 @@ export const brands: Brand[] = [
     logoOnDark: true,
     tagline: "Design autoral para o guarda-roupa contemporâneo",
     history:
-      "A Oficina constrói coleções que equilibram alfaiataria e conforto, com peças pensadas para durar várias estações. A marca é uma das principais parceiras da RBZ em Goiás, Tocantins e Distrito Federal.",
+      "A Oficina constrói coleções que equilibram alfaiataria e conforto, com peças pensadas para durar várias estações. A marca é uma das principais parceiras da RBZ em todo o Brasil.",
     audience:
       "Lojistas multimarca e boutiques que buscam um mix autoral, com forte apelo de design e boa margem de revenda.",
     collections: ["Alto Verão", "Inverno Essencial", "Cápsula Alfaiataria"],
@@ -41,7 +41,7 @@ export const brands: Brand[] = [
     logoOnDark: true,
     tagline: "Referência em beachwear de alto padrão",
     history:
-      "Lenny Niemeyer é sinônimo de moda praia premium no Brasil, com peças reconhecidas internacionalmente pela qualidade de tecido e caimento. A RBZ representa a marca em todo o Centro-Oeste.",
+      "Lenny Niemeyer é sinônimo de moda praia premium no Brasil, com peças reconhecidas internacionalmente pela qualidade de tecido e caimento. A RBZ representa a marca em todo o Brasil.",
     audience:
       "Boutiques de praia e resort wear, lojas de alto padrão em cidades com forte sazonalidade de verão.",
     collections: ["Resort Collection", "Alta Praia", "Loungewear"],
@@ -83,7 +83,7 @@ export const brands: Brand[] = [
     logoOnDark: true,
     tagline: "Estilo despretensioso, qualidade em primeiro lugar",
     history:
-      "A Reserva é uma das marcas de moda masculina mais queridas do Brasil, com um posicionamento leve e uma comunidade de clientes fiéis. Parceria consolidada da RBZ na região.",
+      "A Reserva é uma das marcas de moda masculina mais queridas do Brasil, com um posicionamento leve e uma comunidade de clientes fiéis. Parceria consolidada da RBZ em todo o Brasil.",
     audience:
       "Multimarcas masculinas e lojas com forte relação de proximidade com o cliente final.",
     collections: ["Inverno", "Verão", "Reserva Go"],
@@ -125,7 +125,7 @@ export const brands: Brand[] = [
     logoOnDark: true,
     tagline: "Alfaiataria e sportswear premium",
     history:
-      "A Individual é referência em alfaiataria masculina de alto padrão, com tecidos nobres e acabamento impecável, presente nas melhores lojas do Centro-Oeste através da RBZ.",
+      "A Individual é referência em alfaiataria masculina de alto padrão, com tecidos nobres e acabamento impecável, presente nas melhores lojas do Brasil através da RBZ.",
     audience:
       "Lojas masculinas premium e multimarcas com forte demanda por social e alfaiataria.",
     collections: ["Social Inverno", "Sportswear", "Casamentos"],
@@ -195,7 +195,7 @@ export const brands: Brand[] = [
     logoOnDark: true,
     tagline: "Denim premium internacional",
     history:
-      "Replay é uma grife italiana de denim premium, com presença global e forte reconhecimento de marca, representada pela RBZ na região Centro-Oeste.",
+      "Replay é uma grife italiana de denim premium, com presença global e forte reconhecimento de marca, representada pela RBZ em todo o Brasil.",
     audience:
       "Multimarcas premium e lojas especializadas em denim internacional.",
     collections: ["Denim Icons", "Coleção Internacional"],
